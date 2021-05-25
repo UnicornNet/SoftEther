@@ -2,5 +2,4 @@
 
 - hosts: node
   roles:
-    - template/example
-    - this
+    - ppa

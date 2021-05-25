@@ -1,0 +1,15 @@
+---
+- name: Add SoftEtherVPN Daily repository
+  ansible.builtin.apt_repository:
+    repo: ppa:paskal-07/softethervpn
+  become: true
+
+- name: Install softether-vpn
+  apt:
+    pkg:
+    - softether-common 
+    - softether-vpnbridge
+    - softether-vpncmd
+    - softether-vpnserver
+    state: present
+  become: true
